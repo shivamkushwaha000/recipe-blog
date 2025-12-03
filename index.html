@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivam's Recipe Blog</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #ff6f61, #ffcc70);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .search-bar {
+      text-align: center;
+      margin: 1.5rem;
+    }
+    .search-bar input {
+      padding: 0.7rem;
+      width: 60%;
+      border: 2px solid #ff6f61;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .recipes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h3 {
+      margin: 0;
+      color: #ff6f61;
+    }
+    .rating {
+      margin: 0.5rem 0;
+      color: gold;
+      font-size: 1.2rem;
+    }
+    .submit-section {
+      background: #ffe9d6;
+      padding: 2rem;
+      text-align: center;
+    }
+    .submit-section h2 {
+      color: #ff6f61;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border: 2px solid #ff6f61;
+      border-radius: 5px;
+    }
+    form button {
+      background: #ff6f61;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    form button:hover {
+      background: #e85c50;
+    }
+    footer {
+      background: #ff6f61;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍴 Shivam's Recipe Blog</h1>
+    <nav>
+      <a href="#recipes">Browse Recipes</a>
+      <a href="#submit">Submit Recipe</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search for recipes...">
+  </div>
+
+  <section id="recipes" class="recipes">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604908177522-432c9d6e8f3f" alt="Pasta">
+      <div class="card-content">
+        <h3>Delicious Pasta</h3>
+        <p>A creamy Italian pasta recipe with herbs and cheese.</p>
+        <div class="rating">⭐⭐⭐⭐☆</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604908177522-432c9d6e8f3f" alt="Salad">
+      <div class="card-content">
+        <h3>Fresh Salad</h3>
+        <p>A healthy mix of veggies, olive oil, and lemon dressing.</p>
+        <div class="rating">⭐⭐⭐☆☆</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604908177522-432c9d6e8f3f" alt="Cake">
+      <div class="card-content">
+        <h3>Chocolate Cake</h3>
+        <p>Rich, moist chocolate cake topped with ganache.</p>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="submit" class="submit-section">
+    <h2>Submit Your Recipe</h2>
+    <form>
+      <input type="text" placeholder="Recipe Title" required>
+      <textarea rows="5" placeholder="Recipe Description" required></textarea>
+      <input type="text" placeholder="Your Name" required>
+      <button type="submit">Submit Recipe</button>
+    </form>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 Shivam's Recipe Blog | Made with ❤️</p>
+  </footer>
+</body>
+</html>
